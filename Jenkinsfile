@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the repository
-                git branch: 'main', url: 'https://github.com/your-repo.git'
+                git branch: 'main', url: 'https://github.com/MuruganKrishna/learn-react.git'
             }
         }
         stage('Build') {
