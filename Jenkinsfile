@@ -1,16 +1,9 @@
 pipeline {
-    agent any
+    agent { docker { image 'node:20.18.0-alpine3.20' } }
     stages {
-        stage('Checkout') {
+        stage('build') {
             steps {
-                // Checkout the repository
-                git branch: 'main', url: 'https://github.com/MuruganKrishna/learn-react.git'
-            }
-        }
-        stage('Build') {
-            steps {
-                // Any commands that use the Git repository
-                sh 'git status'
+                sh 'node --version'
             }
         }
     }
